@@ -24,14 +24,24 @@ class TextStyles {
     fontWeight: FontWeightHelper.medium,
     color: ColorsManager.darkBlue,
   );
+  static TextStyle font15DarkBlueMedium = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsManager.darkBlue,
+  );
   static TextStyle font13BlueSemiBold = TextStyle(
     fontSize: 13.sp,
     fontWeight: FontWeightHelper.semiBold,
     color: ColorsManager.mainBlue,
   );
+ static TextStyle font14BlueSemiBold = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: ColorsManager.mainBlue,
+  );
   static TextStyle font32BlueBold = TextStyle(
     fontSize: 32.sp,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeightHelper.bold,
     color: ColorsManager.mainBlue,
   );
   static TextStyle font24BlueBold = TextStyle(
