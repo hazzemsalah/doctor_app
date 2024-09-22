@@ -68,7 +68,7 @@ class AppTextFormField extends StatelessWidget {
         hintStyle: hintStyle ?? TextStyles.font14LightGrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
-        fillColor: fillColor ??ColorsManager.moreLighterGrey,
+        fillColor: fillColor ??ColorsManager.moreLightGrey,
       ),
       obscureText: isObscureText ?? false ,
       style: TextStyles.font14DarkBlueMedium,
