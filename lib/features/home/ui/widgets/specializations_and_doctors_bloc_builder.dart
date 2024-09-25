@@ -36,9 +36,13 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupLoading() {
-    return const SizedBox(
-      height: 100,
-      child: CircularProgressIndicator(),
+    return const Padding(
+      padding: EdgeInsets.only(top: 200),
+      child: Center(
+        child: SizedBox(
+          child: CircularProgressIndicator(),
+        ),
+      ),
     );
   }
 
@@ -58,7 +62,7 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
     );
   }
 
-  Widget setupError(){
+  Widget setupError() {
     return const SizedBox.shrink();
   }
 }
