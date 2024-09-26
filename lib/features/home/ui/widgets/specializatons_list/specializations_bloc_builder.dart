@@ -1,8 +1,9 @@
 import 'package:doctor_app/core/helpers/spacing.dart';
 import 'package:doctor_app/features/home/logic/home_cubit.dart';
 import 'package:doctor_app/features/home/logic/home_state.dart';
-import 'package:doctor_app/features/home/ui/widgets/doctors_list_view.dart';
-import 'package:doctor_app/features/home/ui/widgets/speciality_list_view.dart';
+import 'package:doctor_app/features/home/ui/widgets/doctors_list/doctors_shimmer_loading.dart';
+import 'package:doctor_app/features/home/ui/widgets/specializatons_list/speciality_list_view.dart';
+import 'package:doctor_app/features/home/ui/widgets/specializatons_list/speciality_shimmer_loading.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,22 +35,22 @@ class SpecializationsBlocBuilder extends StatelessWidget {
     );
   }
 
+  /// shimmer loading for both Specializations & Doctors
   Widget setupLoading() {
-    return const Padding(
-      padding: EdgeInsets.only(top: 200),
-      child: Center(
-        child: SizedBox(
-          child: CircularProgressIndicator(),
-        ),
+    return Expanded(
+      child: Column(
+        children: [
+          const SpecialityShimmerLoading(),
+          verticalSpace(8),
+          const DoctorsShimmerLoading(),
+        ],
       ),
     );
   }
 
   Widget setupSuccess(specializationsList) {
-    return 
-        SpecialityListView(
-          specializationsDataList: specializationsList ?? [],
-       
+    return SpecialityListView(
+      specializationsDataList: specializationsList ?? [],
     );
   }
 

@@ -28,6 +28,7 @@ class SpecialityListViewItem extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: ColorsManager.darkBlue,
+                      width: 1.3,
                     ),
                     shape: BoxShape.circle,
                   ),
