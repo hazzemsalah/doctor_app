@@ -22,34 +22,48 @@ environment:
   sdk: '>=3.4.4 <4.0.0'
 
 dependencies:
+  #A build system for Dart code generation and modular compilation
   build_runner: ^2.4.12
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
-  dio: ^5.5.0+1
-  easy_localization: ^3.0.7
   firebase_core: ^3.4.1
   flutter:
     sdk: flutter
+  # State management    
   flutter_bloc: ^8.1.6
+  # for splash screen
   flutter_native_splash: ^2.4.1
+  # for adapting screen and font size.
   flutter_screenutil: ^5.9.3
+  # An SVG rendering and widget library for Flutter, which allows painting
   flutter_svg: ^2.0.10+1
+  # Code generator (mainly used with cubit & retrofit)
   freezed: ^2.5.2
   freezed_annotation: ^2.4.4
+  # for dependency injection
   get_it: ^7.7.0
+  # localization
   intl: ^0.19.0
+  easy_localization: ^3.0.7
+  # Automatically generate code for converting to and from JSON by annotating Dart classes
   json_annotation: ^4.9.0
   json_serializable: ^6.8.0
+  # Networking
+  dio: ^5.5.0+1
   pretty_dio_logger: ^1.4.0
   retrofit: ^4.1.0
   retrofit_generator: ^9.1.1
+  # reading and writing simple key-value pairs
+  shared_preferences: ^2.3.2
+  # provides API to store data in secure storage.
+  flutter_secure_storage: ^9.2.2
+  # Flutter library to load and cache network images.
+  cached_network_image: ^3.4.1
+  # easy way to add shimmer effect
+  shimmer: ^3.0.0
 
 dev_dependencies:
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: 4.0.0
   flutter_test:
     sdk: flutter
