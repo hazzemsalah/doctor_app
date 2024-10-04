@@ -1,6 +1,7 @@
 import 'package:doctor_app/core/helpers/spacing.dart';
 import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/core/widgets/app_text_button.dart';
+import 'package:doctor_app/core/widgets/custom_auth_header_text.dart.dart';
 import 'package:doctor_app/features/login/ui/widgets/terms_and_conditions_text.dart';
 import 'package:doctor_app/features/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:doctor_app/features/sign_up/ui/widgets/already_have_account_text.dart';
@@ -23,15 +24,20 @@ class SignupScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Create Account',
-                  style: TextStyles.font24BlueBold,
+                const CustomAuthHeaderText(
+                  title: 'Create Account',
+                  subTitle:
+                      "Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!",
                 ),
-                verticalSpace(8),
-                Text(
-                  'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-                  style: TextStyles.font14GrayRegular,
-                ),
+                // Text(
+                //   'Create Account',
+                //   style: TextStyles.font24BlueBold,
+                // ),
+                // verticalSpace(8),
+                // Text(
+                //   'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
+                //   style: TextStyles.font14GrayRegular,
+                // ),
                 verticalSpace(36),
                 Column(
                   children: [
