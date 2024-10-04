@@ -1,6 +1,9 @@
+import 'package:doctor_app/core/helpers/extensions.dart';
 import 'package:doctor_app/core/helpers/spacing.dart';
+import 'package:doctor_app/core/routes/routes.dart';
 import 'package:doctor_app/core/theme/styles.dart';
 import 'package:doctor_app/core/widgets/app_text_button.dart';
+import 'package:doctor_app/core/widgets/custom_auth_header_text.dart.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_app/features/login/ui/widgets/dont_have_account_text.dart';
 import 'package:doctor_app/features/login/ui/widgets/email_and_password.dart';
@@ -23,12 +26,17 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Welcome Back", style: TextStyles.font24BlueBold),
-                verticalSpace(8),
-                Text(
-                  "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
-                  style: TextStyles.font14GrayRegular,
+                const CustomAuthHeaderText(
+                  title: 'Welcome Back',
+                  subTitle:
+                      "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
                 ),
+                // Text("Welcome Back", style: TextStyles.font24BlueBold),
+                // verticalSpace(8),
+                // Text(
+                //   "We're excited to have you back, can't wait to see what you've been up to since you last logged in.",
+                //   style: TextStyles.font14GrayRegular,
+                // ),
                 verticalSpace(36),
                 Column(
                   children: [
@@ -36,10 +44,18 @@ class LoginScreen extends StatelessWidget {
                     verticalSpace(24),
                     Align(
                       alignment: AlignmentDirectional.centerEnd,
-                      child: Text(
-                        "Forget Password ?",
-                        style: TextStyles.font13BlueRegular,
-                      ),
+                      child: Builder(builder: (context) {
+                        return GestureDetector(
+                          onTap: () {
+                            context.pushReplacementNamed(
+                                Routes.forgetPasswordScreen);
+                          },
+                          child: Text(
+                            "Forgot Password ?",
+                            style: TextStyles.font13BlueRegular,
+                          ),
+                        );
+                      }),
                     ),
                     verticalSpace(40),
                     AppTextButton(
