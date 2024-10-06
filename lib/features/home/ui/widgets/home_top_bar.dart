@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeTopBar extends StatelessWidget {
-  const HomeTopBar({super.key});
+  final String name;
+  const HomeTopBar({super.key , required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,7 @@ class HomeTopBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hi, Hazem!",
+              "Hi, $name!",
               style: TextStyles.font18DarkBlueBold,
             ),
             Text(
