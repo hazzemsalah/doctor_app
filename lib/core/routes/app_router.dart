@@ -43,8 +43,15 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => HomeCubit(getIt())..getSpecializations(),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => HomeCubit(getIt())..getSpecializations(),
+              ),
+              BlocProvider(
+                create: (context) => SignupCubit(getIt())..nameController,
+            )
+            ],
             child: const HomeScreen(),
           ),
         );
