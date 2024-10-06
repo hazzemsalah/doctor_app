@@ -47,7 +47,7 @@ class LoginScreen extends StatelessWidget {
                       child: Builder(builder: (context) {
                         return GestureDetector(
                           onTap: () {
-                            context.pushReplacementNamed(
+                            context.pushNamed(
                                 Routes.forgetPasswordScreen);
                           },
                           child: Text(

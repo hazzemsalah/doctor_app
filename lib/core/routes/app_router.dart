@@ -1,7 +1,8 @@
 import 'package:doctor_app/core/di/dependency_injection.dart';
 import 'package:doctor_app/core/routes/routes.dart';
 import 'package:doctor_app/features/home/logic/home_cubit.dart';
-import 'package:doctor_app/features/home/ui/home_screen.dart';
+import 'package:doctor_app/features/home/ui/screens/home_screen.dart';
+import 'package:doctor_app/features/home/ui/screens/see_all_specializatios_screen.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_app/features/login/ui/forgot_password_screen.dart';
 import 'package:doctor_app/features/login/ui/login_screen.dart';
@@ -20,6 +21,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const OnboardingScreen(),
         );
+
       case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -27,6 +29,7 @@ class AppRouter {
             child: const LoginScreen(),
           ),
         );
+
       case Routes.forgetPasswordScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -34,6 +37,7 @@ class AppRouter {
             child: const ForgotPasswordScreen(),
           ),
         );
+
       case Routes.signUpScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
@@ -41,6 +45,7 @@ class AppRouter {
             child: const SignupScreen(),
           ),
         );
+
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (_) => MultiBlocProvider(
@@ -50,11 +55,20 @@ class AppRouter {
               ),
               BlocProvider(
                 create: (context) => SignupCubit(getIt())..nameController,
-            )
+              )
             ],
             child: const HomeScreen(),
           ),
         );
+
+      case Routes.seeAllSpecializatiosScreen:
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (context) => HomeCubit(getIt())..getSpecializations(),
+            child: const SeeAllSpecializationsScreen(),
+          ),
+        );
+
       default:
         return null;
     }

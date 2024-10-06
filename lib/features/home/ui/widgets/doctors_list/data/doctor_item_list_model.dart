@@ -20,7 +20,7 @@ List<RecommendationDoctorItemModel> doctorItemImageList = [
     image: "assets/images/doctor4.png",
   ),
   RecommendationDoctorItemModel(
-    image: "assets/images/doctor7.png",
+    image: "assets/images/doctor10.png",
   ),
   RecommendationDoctorItemModel(
     image: "assets/images/doctor8.png",
@@ -50,7 +50,7 @@ List<RecommendationDoctorItemModel> doctorItemImageList = [
     image: "assets/images/doctor4.png",
   ),
   RecommendationDoctorItemModel(
-    image: "assets/images/doctor7.png",
+    image: "assets/images/doctor10.png",
   ),
   RecommendationDoctorItemModel(
     image: "assets/images/doctor8.png",
@@ -80,7 +80,7 @@ List<RecommendationDoctorItemModel> doctorItemImageList = [
     image: "assets/images/doctor4.png",
   ),
   RecommendationDoctorItemModel(
-    image: "assets/images/doctor7.png",
+    image: "assets/images/doctor10.png",
   ),
   RecommendationDoctorItemModel(
     image: "assets/images/doctor8.png",
@@ -110,7 +110,7 @@ List<RecommendationDoctorItemModel> doctorItemImageList = [
     image: "assets/images/doctor4.png",
   ),
   RecommendationDoctorItemModel(
-    image: "assets/images/doctor7.png",
+    image: "assets/images/doctor10.png",
   ),
   RecommendationDoctorItemModel(
     image: "assets/images/doctor8.png",
@@ -140,7 +140,7 @@ List<RecommendationDoctorItemModel> doctorItemImageList = [
     image: "assets/images/doctor4.png",
   ),
   RecommendationDoctorItemModel(
-    image: "assets/images/doctor7.png",
+    image: "assets/images/doctor10.png",
   ),
   RecommendationDoctorItemModel(
     image: "assets/images/doctor8.png",
