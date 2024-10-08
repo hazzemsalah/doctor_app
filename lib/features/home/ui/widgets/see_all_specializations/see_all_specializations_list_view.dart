@@ -14,8 +14,8 @@ class SeeAllSpecializationsListView extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         childAspectRatio: 1,
-        mainAxisSpacing: 8.0,
-        crossAxisSpacing: 8.0,
+        mainAxisSpacing: 16.0,
+        crossAxisSpacing: 16.0,
       ),
       itemCount: specializationsDataList!.length,
       itemBuilder: (context, index) {

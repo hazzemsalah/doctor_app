@@ -1,8 +1,10 @@
 import 'package:doctor_app/core/di/dependency_injection.dart';
 import 'package:doctor_app/core/routes/routes.dart';
+import 'package:doctor_app/features/home/data/models/specializations_response_model.dart';
 import 'package:doctor_app/features/home/logic/home_cubit.dart';
 import 'package:doctor_app/features/home/ui/screens/home_screen.dart';
 import 'package:doctor_app/features/home/ui/screens/see_all_specializatios_screen.dart';
+import 'package:doctor_app/features/home/ui/screens/specialization_doctors_screen.dart';
 import 'package:doctor_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:doctor_app/features/login/ui/forgot_password_screen.dart';
 import 'package:doctor_app/features/login/ui/login_screen.dart';
@@ -62,13 +64,19 @@ class AppRouter {
         );
 
       case Routes.seeAllSpecializatiosScreen:
+        final specializations =
+            settings.arguments as List<SpecializationsData?>?;
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => HomeCubit(getIt())..getSpecializations(),
-            child: const SeeAllSpecializationsScreen(),
-          ),
+          builder: (_) =>
+              SeeAllSpecializationsScreen(specializations: specializations),
         );
 
+      case Routes.specializationDoctorsScreen:
+        final specializationData = settings.arguments as SpecializationsData;
+        return MaterialPageRoute(
+          builder: (_) => SpecializationDoctorsScreen(
+              specializationData: specializationData),
+        );
       default:
         return null;
     }

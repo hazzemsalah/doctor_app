@@ -27,8 +27,10 @@ class DoctorsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupSuccess(doctorsList) {
-    return DoctorsListView(
-      doctorsList: doctorsList,
+    return Expanded(
+      child: DoctorsListView(
+        doctorsList: doctorsList,
+      ),
     );
   }
 
